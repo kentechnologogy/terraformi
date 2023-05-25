@@ -8,7 +8,7 @@ resource "aws_route_table" "public-route-table" {
   }
 
   tags = {
-    Name = "Public Route Table"
+    Name = "${var.route_table}"
   }
 }
 # Associate Public Subnet to Public Route Table

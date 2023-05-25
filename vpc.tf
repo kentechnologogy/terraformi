@@ -5,6 +5,6 @@ resource "aws_vpc" "test" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "Demo VPC"
+    Name = "${var.vpc_name}"
   }
 }

@@ -6,7 +6,7 @@ resource "aws_subnet" "public-subnet" {
   map_public_ip_on_launch  = true
 
   tags = {
-    Name = "Public Subnet Cidr"
+    Name = "${var.subnet_name}"
   }
 }
 # Create Private Subnet
@@ -17,6 +17,6 @@ resource "aws_subnet" "private-subnet" {
   map_public_ip_on_launch  = false
   
   tags = {
-    Name = "Private Subnet Cidr"
+    Name = "${var.subnet_name_private}"
   }
 }

@@ -3,6 +3,6 @@ resource "aws_internet_gateway" "internet-gateway" {
   vpc_id = aws_vpc.test.id
 
   tags = {
-    Name = "IGW"
+    Name = "${var.internet_gateway}"
   }
 }
